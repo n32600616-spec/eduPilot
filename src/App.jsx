@@ -978,7 +978,7 @@ if (selected === question.answer) {
   setAiFeedback("Analyzing your answer...");
 
   try {
-    const response = await fetch("http://localhost:5000/api/mentor", {
+    const response = await fetch("https://edupilot-o3dk.onrender.com/api/mentor", {
       method: "POST",
       headers: {
         "Content-Type": "application/json"
@@ -1410,7 +1410,7 @@ function Mentor() {
     setInput("");
     setTyping(true);
 
-fetch("http://localhost:5000/api/mentor", {
+fetch("https://edupilot-o3dk.onrender.com/api/mentor", {
   method: "POST",
   headers: {
     "Content-Type": "application/json"
@@ -1582,7 +1582,7 @@ fetch("http://localhost:5000/api/mentor", {
 
           <div className="mentor-note">
             <Sparkles size={12} />
-            AI responses will be powered by DeepSeek.
+            AI responses will be powered by Gemini.
           </div>
 
         </section>
