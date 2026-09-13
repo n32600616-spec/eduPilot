@@ -93,8 +93,10 @@ app.post("/api/mentor", async (req, res) => {
     });
   }
 });
-const server = app.listen(5000, () => {
-  console.log("EduPilot AI Server running on http://localhost:5000");
+const PORT = process.env.PORT || 5000;
+
+const server = app.listen(PORT, "0.0.0.0", () => {
+  console.log(`EduPilot AI Server running on port ${PORT}`);
 });
 
 server.on("error", (error) => {
@@ -107,3 +109,6 @@ process.on("SIGINT", () => {
     process.exit(0);
   });
 });
+
+
+
